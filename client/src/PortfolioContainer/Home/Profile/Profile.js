@@ -10,17 +10,17 @@ export default function Profile() {
         <div className='profile-parent'>
             <div className='profile-details'>
                 <div className='colz'>
-                <div className='colz-icon'>
-                    <a href='https://www.linkedin.com/in/joan-kouloumba-570a7680/'>
-                        <FaLinkedinIn />
-                    </a>
-                    <a href='https://twitter.com/joanKouloumba'>
-                       <FaTwitter /> 
-                    </a>
-                    <a href='https://www.youtube.com/channel/UCNAnFZ-GPEkayXRv6K6xD6Q'>
-                     <FaYoutube /> 
-                    </a>
-                </div>
+                    <div className='colz-icon'>
+                        <a href='https://www.linkedin.com/in/joan-kouloumba-570a7680/'>
+                            <FaLinkedinIn />
+                        </a>
+                        <a href='https://twitter.com/joanKouloumba'>
+                        <FaTwitter /> 
+                        </a>
+                        <a href='https://www.youtube.com/channel/UCNAnFZ-GPEkayXRv6K6xD6Q'>
+                        <FaYoutube /> 
+                        </a>
+                    </div>
                 </div>
                 <div className='profile-details-name'>
                     <span className='primary-text'>
