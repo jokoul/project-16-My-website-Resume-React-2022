@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Animations from "../../utils/Animations";
 import ScreenHeading from "../../utils/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utils/ScrollService";
@@ -10,7 +11,7 @@ export default function Resume(props) {
   //console.log(props);
 
   let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
+    if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
 
@@ -230,7 +231,10 @@ export default function Resume(props) {
   };
 
   return (
-    <div className="resume-container screen-container" id={props.id || ""}>
+    <div
+      className="resume-container screen-container fade-in"
+      id={props.id || ""}
+    >
       <div className="resume-content">
         <ScreenHeading title={"Resume"} subHeading={"My Formal Bio Details"} />
         <div className="resume-card">

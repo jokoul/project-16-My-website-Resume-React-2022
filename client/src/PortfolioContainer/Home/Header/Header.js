@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 import { TOTAL_SCREENS, GET_SCREEN_INDEX } from "../../../utils/commonUtils";
 import ScrollService from "../../../utils/ScrollService";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -11,25 +12,26 @@ export default function Header() {
 
   const updateCurrentScreen = (currentScreen) => {
     if (!currentScreen || !currentScreen.screenInView) return;
+
     let screenIndex = GET_SCREEN_INDEX(currentScreen.screenInView);
     if (screenIndex < 0) return;
   };
   let currentScreenSubscription =
-    ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen);
+    ScrollService.currentScreenBroadcaster.subscribe(updateCurrentScreen);
 
   const getHeaderOptions = () => {
-    return TOTAL_SCREENS.map((screen, i) => (
+    return TOTAL_SCREENS.map((Screen, i) => (
       <div
-        key={screen.screen_name}
-        className={getHeaderOptionsClass(i)}
-        onClick={() => switchScreen(i, screen)}
+        key={Screen.screen_name}
+        className={getHeaderOptionsClasses(i)}
+        onClick={() => switchScreen(i, Screen)}
       >
-        <span>{screen.screen_name}</span>
+        <span>{Screen.screen_name}</span>
       </div>
     ));
   };
 
-  const getHeaderOptionsClass = (index) => {
+  const getHeaderOptionsClasses = (index) => {
     let classes = "header-option";
     if (index < TOTAL_SCREENS.length - 1) {
       classes += " header-option-seperator";
@@ -48,6 +50,13 @@ export default function Header() {
     setSelectedScreen(index);
     setShowHeaderOptions(false);
   };
+
+  useEffect(() => {
+    return () => {
+      currentScreenSubscription.unsubscribe();
+    };
+  }, [currentScreenSubscription]);
+
   return (
     <div>
       <div

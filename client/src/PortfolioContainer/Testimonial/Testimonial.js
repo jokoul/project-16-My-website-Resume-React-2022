@@ -1,19 +1,19 @@
-import "./Testimonial.css";
 import React from "react";
 import OwlCarousel from "react-owl-carousel";
+
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import ScreenHeading from "../../utils/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utils/ScrollService";
 import Animations from "../../utils/Animations";
 import shape from "../../assets/Testimonial/shape-bg.png";
+import "./Testimonial.css";
 
 export default function Testimonial(props) {
   let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
+    if (screen.fadeInScreen !== props.id) return;
     Animations.animations.fadeInScreen(props.id);
   };
-
   const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
@@ -21,11 +21,14 @@ export default function Testimonial(props) {
     loop: true,
     margin: 0,
     nav: true,
-    animationIn: "bounceInRight",
-    animationOut: "bounceOutRight",
+    mouseDrag: true,
+    touchDrag: true,
+    autoplayHoverPause: true,
+    /*animationIn: "bounceInRight",
+    animationOut: "bounceOutRight",*/
     dots: true,
     autoplay: true,
-    smartSpeed: 1000,
+    smartSpeed: 3000,
     responsive: {
       0: {
         items: 1,
@@ -46,9 +49,9 @@ export default function Testimonial(props) {
     <div>
       <ScreenHeading
         title={"Testimonial"}
-        subHeading={"What My Work Colleagues Say About Me"}
+        subHeading={"What Work Colleagues Say About Me"}
       />
-      <section className="testimonial-section" id={props.id || ""}>
+      <section className="testimonial-section fade-in" id={props.id || ""}>
         <div className="container">
           <div className="row">
             <OwlCarousel
@@ -100,10 +103,10 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I was Joan's mentor during his training as a web
-                      developer. He was able to take advantage of his learning
-                      ability to quickly adapt to the context of each project
-                      carried out during this training.
+                      Joan make a great job by building a social network
+                      application for the company named Groupomania. Joan
+                      succeeded to overcome this challenge by analyzing
+                      methodically all the issues we face on this project.
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -139,10 +142,10 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I was Joan's mentor during his training as a web
-                      developer. He was able to take advantage of his learning
-                      ability to quickly adapt to the context of each project
-                      carried out during this training.
+                      Joan is always aware of the quality product when we work
+                      on the machined parts at CMW. He knows very well to
+                      implement the client quality requirement into the
+                      production process.
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">
@@ -180,10 +183,10 @@ export default function Testimonial(props) {
                   <div className="testi-comment">
                     <p>
                       <i className="fa fa-quote-left" />
-                      I was Joan's mentor during his training as a web
-                      developer. He was able to take advantage of his learning
-                      ability to quickly adapt to the context of each project
-                      carried out during this training.
+                      I appreciate the way Joan helped me to plan Quality
+                      certification audit. He understood quickly the quality
+                      management system and rewrite some procedures to comply
+                      external requirement.
                       <i className="fa fa-quote-right" />
                     </p>
                     <ul className="stars list-unstyled">

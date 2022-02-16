@@ -1,4 +1,5 @@
 import React from "react";
+
 import Animations from "../../utils/Animations";
 import ScreenHeading from "../../utils/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utils/ScrollService";
@@ -6,8 +7,8 @@ import "./AboutMe.css";
 
 export default function AboutMe(props) {
   let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id) return;
-    Animations.animations.fadeInScreen(props.id);
+    if (screen.fadeInScreen !== props.id) return;
+    return Animations.animations.fadeInScreen(props.id);
   };
 
   const fadeInSubscription =
@@ -28,7 +29,7 @@ export default function AboutMe(props) {
     },
   };
 
-  const renderHighLight = () => {
+  const renderHighlight = () => {
     return SCREEN_CONSTANTS.highlights.bullets.map((value, i) => (
       <div className="highlight" key={i}>
         <div className="highlight-blob"></div>
@@ -38,7 +39,10 @@ export default function AboutMe(props) {
   };
 
   return (
-    <div className="about-me-container screen-containre" id={props.id || ""}>
+    <div
+      className="about-me-container screen-container fade-in"
+      id={props.id || ""}
+    >
       <div className="about-me-parent">
         <ScreenHeading title={"About Me"} subHeading={"Why Choose Me"} />
         <div className="about-me-card">
@@ -51,10 +55,15 @@ export default function AboutMe(props) {
               <div className="highlight-heading">
                 <span>{SCREEN_CONSTANTS.highlights.heading}</span>
               </div>
-              {renderHighLight()}
+              {renderHighlight()}
             </div>
             <div className="about-me-options">
-              <button className="btn primary-btn">Hire Me </button>
+              <button
+                className="btn primary-btn"
+                onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+              >
+                Hire Me{" "}
+              </button>
               <a
                 href="CV_Kouloumba_Joan.pdf"
                 download="Joan CV_Kouloumba_Joan.pdf"
