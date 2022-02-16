@@ -9,7 +9,7 @@
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
-  background-color: var(--screen-head);
+  background-color: var(--green);
 }
 .central-form h2 {
   color: white;
@@ -22,7 +22,7 @@
 }
 .back-form .img-back {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .img-back h4 {
   color: white;
@@ -86,15 +86,15 @@ form button {
   border: 2px solid var(--dark-orange);
   font-size: 18px;
   border-radius: 19px;
-  background-color: var(--screen-head);
+  background-color: var(--green);
   color: white;
   justify-content: center;
   align-items: center;
 }
 form button:hover {
-  background-color: var(--screen-head);
+  background-color: var(--green);
   transition: all 1s ease;
-  border: 2px solid var(--screen-head);
+  border: 2px solid var(--green);
 }
 .img-back {
   flex: 1;

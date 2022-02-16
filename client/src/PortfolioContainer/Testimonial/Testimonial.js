@@ -8,6 +8,10 @@ import ScrollService from "../../utils/ScrollService";
 import Animations from "../../utils/Animations";
 import shape from "../../assets/Testimonial/shape-bg.png";
 import "./Testimonial.css";
+import Mohammed from "../../img/Testimonial/Mohammed_Boulouiz.jpg";
+import Vlad from "../../img/Testimonial/Vladislav_Sokolov.jpg";
+import Aurelia from "../../img/Testimonial/Aurelia_Maxut.jpg";
+import Anne from "../../img/Testimonial/Anne-Laure_Freland.jpg";
 
 export default function Testimonial(props) {
   let fadeInScreenHandler = (screen) => {
@@ -89,10 +93,7 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img
-                      src="img/testimonial/Mohammed_Boulouiz.jpg"
-                      alt="no internet connection"
-                    />
+                    <img src={Mohammed} alt="no internet connection" />
                     <h5>Mohammed Boulouiz</h5>
                     <p>Web Application Developer at Monibrand</p>
                   </div>
@@ -128,10 +129,7 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img
-                      src="img/testimonial/Vladislav_Sokolov.jpg"
-                      alt="no internet connection"
-                    />
+                    <img src={Vlad} alt="no internet connection" />
                     <h5>Vladislav Sokolov</h5>
                     <p>Software Engineer at EDF</p>
                   </div>
@@ -167,10 +165,7 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img
-                      src="img/testimonial/Aurelia_Maxut.jpg"
-                      alt="no internet connection"
-                    />
+                    <img src={Aurelia} alt="no internet connection" />
                     <h5>Aurélia Maxut</h5>
                     <p>
                       Quality, Health, Safety and Environment manager at SATAB
@@ -208,10 +203,7 @@ export default function Testimonial(props) {
                     </ul>
                   </div>
                   <div className="client-info">
-                    <img
-                      src="img/testimonial/Anne-Laure_Freland.jpg"
-                      alt="no internet connection"
-                    />
+                    <img src={Anne} alt="no internet connection" />
                     <h5>Anne-Laure Freland</h5>
                     <p>Product Quality Manager at FG MANUFACTURE</p>
                   </div>
