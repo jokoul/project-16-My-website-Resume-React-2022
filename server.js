@@ -15,7 +15,7 @@ app.use(cors());
 app.use("/", contactRoute);
 
 //Deployement with Heroku
-if (process.env.NODE8ENV === "production") {
+if (process.env.NODE_ENV === "production") {
   //we create a "build" folder in "client"
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {
