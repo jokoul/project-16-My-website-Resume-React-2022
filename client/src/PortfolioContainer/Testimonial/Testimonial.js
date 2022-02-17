@@ -25,14 +25,10 @@ export default function Testimonial(props) {
     loop: true,
     margin: 0,
     nav: true,
-    mouseDrag: true,
-    touchDrag: true,
     autoplayHoverPause: true,
-    /*animationIn: "bounceInRight",
-    animationOut: "bounceOutRight",*/
     dots: true,
     autoplay: true,
-    smartSpeed: 3000,
+    autoplayTimeout: 7000,
     responsive: {
       0: {
         items: 1,
