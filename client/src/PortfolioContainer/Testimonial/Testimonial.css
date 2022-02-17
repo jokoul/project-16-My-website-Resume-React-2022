@@ -1,5 +1,6 @@
 .testimonial-section {
-  padding: 80px 0 80px;
+  width: 100%;
+  padding: 80px 0;
   background-image: url("../../assets/Testimonial/bg-1.jpg");
   background-position: center;
   background-attachment: fixed; /*allow us to fixed the background image when we scroll*/

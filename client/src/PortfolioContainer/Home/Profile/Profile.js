@@ -65,7 +65,21 @@ export default function Profile() {
               href="CV_Kouloumba_Joan.pdf"
               download="Joan CV_Kouloumba_Joan.pdf"
             >
-              <button className="btn highlighted-btn">Get Resume</button>
+              <button className="btn highlighted-btn">
+                Get Resume
+                <br />
+                <span>french version</span>
+              </button>
+            </a>
+            <a
+              href="Joan_Kouloumba_Resume.pdf"
+              download="Joan_Kouloumba_Resume.pdf"
+            >
+              <button className="btn highlighted-btn">
+                Get Resume
+                <br />
+                <span>english version</span>
+              </button>
             </a>
           </div>
         </div>

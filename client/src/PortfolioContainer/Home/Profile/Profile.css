@@ -39,11 +39,16 @@
   font-size: 1rem;
   margin: 1rem;
 }
+
+.profile-options .btn {
+  width: 150px;
+  padding: 10px;
+  z-index: 700;
+}
 .profile-options .highlighted-btn {
-  margin: 0 0 0 28px;
+  margin: 1rem;
 }
 .profile-options .highlighted-btn:hover {
-  margin: 0 0 0 28px;
   background-color: cornsilk;
   color: #111;
 }
@@ -79,6 +84,18 @@
   transform: scale(1.5);
 }
 
+@media screen and (max-width: 1110px) {
+  .profile-details-name {
+    font-size: 20px;
+  }
+  .profile-details-role {
+    flex-wrap: wrap;
+  }
+  .profile-options .btn {
+    width: 150px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .profile-parent {
     flex-direction: column-reverse;
@@ -102,6 +119,23 @@
     animation: popProfile 3s infinite;
   }
 }
+
+@media screen and (max-width: 575px) {
+  .profile-details-role p {
+    height: 5rem;
+  }
+  .profile-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .profile-options .btn {
+    width: 12rem;
+    margin: 0 0 1rem 0;
+  }
+}
+
 @media screen and (max-width: 375px) {
   .profile-picture {
     margin: 3rem 0 1rem 0 !important;
@@ -113,30 +147,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .profile-options .highlighted-btn {
-    margin: 0 0 1rem 0;
-  }
-  .profile-options .highlighted-btn:hover {
-    margin: 0;
-  }
-}
-
-@media screen and (max-width: 1110px) {
-  .profile-details-name {
-    font-size: 20px;
-  }
-  .profile-details-role {
-    flex-wrap: wrap;
-  }
-  .profile-options .btn {
-    width: 120px;
-    padding: 11px 0;
-    z-index: 700;
-  }
-}
-@media screen and (max-width: 575px) {
-  .profile-details-role p {
-    height: 5rem;
   }
 }
