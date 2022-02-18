@@ -21,7 +21,7 @@ router.post("/contact", (req, res) => {
   });
   let mailOptions = {
     from: data.email,
-    to: "edubabadigital@gmail.com",
+    to: "joankouloumba90@gmail.com",
     subject: `message from ${data.name}`,
     html: `
             <h3>Informations<h3/>
@@ -38,7 +38,7 @@ router.post("/contact", (req, res) => {
     try {
       if (error)
         return res.status(400).json({ msg: "Please Fill All The Fields!" });
-      res.status(200).json({ msg: "Thank You For Contacting Ehizeex." });
+      res.status(200).json({ msg: "Thank You For Contacting Joan." });
     } catch (error) {
       if (error) return res.status(500).json({ msg: "There is server error" });
     }
