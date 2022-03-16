@@ -16,9 +16,14 @@ router.post("/contact", (req, res) => {
   let smtpTransporter = nodemailer.createTransport({
     service: "Gmail",
     port: 465,
+    secure: true,
     auth: {
       user: "joankouloumba90@gmail.com",
       pass: "joankoul.1990",
+    },
+    tls: {
+      //do not fail on invalid certs
+      rejectUnauthorized: false,
     },
   });
   let mailOptions = {
