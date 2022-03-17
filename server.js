@@ -2,11 +2,15 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
+const helmet = require("helmet");
 
 const contactRoute = require("./route/contactRoute");
 
 //we create a new express application and put in the constance "app"
 const app = express();
+
+//Use helmet to protect against vulnerability
+app.use(helmet());
 
 //creating the middleware
 app.use(express.json());

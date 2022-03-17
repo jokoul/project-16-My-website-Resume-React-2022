@@ -265,6 +265,7 @@ import 'react-toastify/dist/ReactToastify.css';
 //give node mailer access to your gmail to send message from your local computer 
  https://myaccount.google.com/lesssecureapps
 
+//deactivate the 2 steps validation that bloque lower secure application and therfore the mail sending feature of our application.
 
 //give heroku machine access to your g mail
  https://accounts.google.com/b/0/DisplayUnlockCaptcha
