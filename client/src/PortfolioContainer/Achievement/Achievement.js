@@ -19,7 +19,9 @@ export default function Achievement(props) {
         subHeading={"Take a look around all my projects achieved"}
       />
       <div className="btn-wrapper">
-        <a href="#contact">Explore my projects</a>
+        <a href="https://joan-kouloumba.in" target="_blank">
+          Explore my projects
+        </a>
       </div>
     </div>
   );

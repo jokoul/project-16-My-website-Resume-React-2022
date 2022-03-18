@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-//const helmet = require("helmet");
+//const helmet = require("helmet"); //Helmet block the rendering of the application
 
 const contactRoute = require("./route/contactRoute");
 
