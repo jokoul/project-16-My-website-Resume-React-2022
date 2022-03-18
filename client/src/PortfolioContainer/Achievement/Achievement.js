@@ -20,7 +20,7 @@ export default function Achievement(props) {
       />
       <div className="btn-wrapper">
         <a
-          href="https://joan-kouloumba.in/banana-design#achievement"
+          href="https://joan-kouloumba.in/professional-site#achievement"
           target="_blank"
         >
           Explore my projects
