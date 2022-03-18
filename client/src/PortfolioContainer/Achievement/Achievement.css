@@ -20,3 +20,7 @@
   border: 5px solid #ff5823;
   transform: scale(1.05);
 }
+.btn-wrapper a:active {
+  border: 5px solid #ff5823;
+  transform: scale(1.05);
+}
