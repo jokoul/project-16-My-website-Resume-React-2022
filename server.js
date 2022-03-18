@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-const helmet = require("helmet");
+//const helmet = require("helmet");
 
 const contactRoute = require("./route/contactRoute");
 
@@ -10,7 +10,7 @@ const contactRoute = require("./route/contactRoute");
 const app = express();
 
 //Use helmet to protect against vulnerability
-app.use(helmet());
+//app.use(helmet());
 
 //creating the middleware
 app.use(express.json());
