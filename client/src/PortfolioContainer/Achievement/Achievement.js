@@ -19,7 +19,10 @@ export default function Achievement(props) {
         subHeading={"Take a look around all my projects achieved"}
       />
       <div className="btn-wrapper">
-        <a href="https://joan-kouloumba.in#achievement" target="_blank">
+        <a
+          href="https://joan-kouloumba.in/banana-design#achievement"
+          target="_blank"
+        >
           Explore my projects
         </a>
       </div>
