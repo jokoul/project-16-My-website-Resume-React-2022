@@ -16,7 +16,7 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTANTS = {
     description:
-      "As an experienced industrial qualitician, I chose in 2021 to retrain in the web development, a booming sector that has always fascinated me. Following my recent validation of a professional diploma of web developer, I am looking for a company to sign a 24-month professionalization contract with a rhythm of 3 days per week in the company. This will allow me to continue my work-study Java developer training.",
+      "As an experienced industrial qualitician, I chose in 2021 to retrain in the web development, a booming sector that has always fascinated me. Following my recent validation of a professional diploma of web developer, I am looking for a company to sign a 24-month professionalization contract with a rhythm of one week per two weeks in the company. This will allow me to continue my work-study full-stack developer training.",
     highlights: {
       bullets: [
         "Creating web application using framework like React.js and Vue.js",
