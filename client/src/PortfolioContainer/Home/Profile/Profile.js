@@ -61,10 +61,7 @@ export default function Profile() {
             >
               Hire Me{" "}
             </button>
-            <a
-              href="CV_Kouloumba_Joan.pdf"
-              download="Joan CV_Kouloumba_Joan.pdf"
-            >
+            <a href="CV_Kouloumba_Joan.pdf" download="CV_Kouloumba_Joan.pdf">
               <button className="btn highlighted-btn">
                 Get Resume
                 <br />
